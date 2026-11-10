@@ -1,0 +1,20 @@
+{
+  "name": "risk-aware-payment-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --experimental-strip-types src/payment_intake.ts",
+    "setup": "node --experimental-strip-types src/setup_queue.ts",
+    "worker": "node --experimental-strip-types src/queue_worker.ts",
+    "test": "node --experimental-strip-types --test test/risk_decision.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.10.0"
+  }
+}
